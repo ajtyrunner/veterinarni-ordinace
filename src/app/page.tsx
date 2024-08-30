@@ -2,7 +2,6 @@ import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import OpeningHours from '@/components/OpeningHours';
-import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -22,14 +21,7 @@ export default function Home() {
               </ul>
             </div>
             <div className="home-image">
-              <Image
-                src="/images/dogs.jpg"
-                alt="Dogs"
-                layout="responsive"
-                width={640}
-                height={480}
-                className="rounded-lg"
-              />
+              {/* Nahradíme Image komponentu divem s pozadím */}
             </div>
           </div>
         </div>
