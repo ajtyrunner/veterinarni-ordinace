@@ -83,7 +83,7 @@ a {
   background: linear-gradient(to left, rgba(245, 245, 245, 0.7) 30%, var(--background-color)), url('/images/dogs.jpg') center/cover no-repeat;
   display: flex;
   align-items: flex-start;
-  height: 100%;
+  height: 50%; /* Nastavení poloviční výšky oproti původní velikosti */
 }
 
 /* Styly pro nadpisy na domovské stránce */
