@@ -12,9 +12,9 @@ export default function Home() {
         <div className="container mx-auto p-8 flex-grow">
           <div className="home-content">
             <div className="home-text">
-              <h1 className="text-5xl font-bold text-gray-900 mb-4">O vašeho miláčka se postaráme</h1>
+              <h1 className="text-5xl font-bold mb-4 home-header">O vašeho miláčka se postaráme</h1>
               <p>Komplexní péče o malá domácí zvířata</p>
-              <ul className="list-disc list-inside mt-4">
+              <ul className="mt-4">
                 <li>Očkování</li>
                 <li>Odborné zákroky</li>
                 <li>Profesionální prevence</li>
@@ -26,15 +26,15 @@ export default function Home() {
                 src="/images/dogs.jpg"
                 alt="Dogs"
                 layout="responsive"
-                width={800}  // Šířka obrázku
-                height={600} // Výška obrázku
+                width={640}
+                height={480}
                 className="rounded-lg"
               />
             </div>
           </div>
         </div>
-        <OpeningHours />   
-      </div>     
+        <OpeningHours />
+      </div>
       <Footer />
     </>
   );
