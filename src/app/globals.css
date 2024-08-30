@@ -19,12 +19,7 @@
 /* Základní styly těla stránky */
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgb(var(--background-end-rgb))
-  )
-  rgb(var(--background-start-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 a {
@@ -41,90 +36,152 @@ a {
 }
 
 .header-container {
-  @apply flex flex-col md:flex-row items-center justify-between p-4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+@media (min-width: 768px) {
+  .header-container {
+    flex-direction: row;
+  }
 }
 
 .logo-title {
-  @apply flex items-center space-x-4;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .logo-title img {
-  cursor: pointer; /* Ukazatel myši při hoveru nad logem */
-  @apply w-16 h-16 md:w-24 md:h-24; /* Responsivní velikost loga */
+  cursor: pointer;
+  width: 64px;
+  height: 64px;
+}
+
+@media (min-width: 768px) {
+  .logo-title img {
+    width: 96px;
+    height: 96px;
+  }
 }
 
 /* Styl pro navigační odkazy */
 .nav-links {
-  @apply hidden md:flex md:flex-row md:space-x-4 mt-4 md:mt-0;
+  display: none;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    position: static;
+    top: auto;
+    left: auto;
+    width: auto;
+    z-index: auto;
+  }
 }
 
 .nav-link {
-  @apply text-lg md:text-xl font-semibold text-white hover:text-gray-200 transition-colors duration-300;
+  font-size: 18px;
+  color: white;
+  padding: 8px 16px;
+  transition: color 0.3s, border-bottom-color 0.3s;
   border-bottom: 2px solid transparent;
-  padding: 8px;
 }
 
 .nav-link:hover {
+  color: #ffffff;
   border-bottom-color: white;
-}
-
-/* Mobile menu styl */
-.menu-open .nav-links {
-  @apply flex flex-col;
-  display: block;
-}
-
-@media (max-width: 768px) {
-  .nav-links {
-    @apply flex-col items-center; /* Vertikální menu na mobilních zařízeních */
-    display: none;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.8); /* Volitelná barva pozadí pro mobilní menu */
-    position: absolute;
-    top: 100%; /* Umístění pod hlavičku */
-    left: 0;
-    width: 100%;
-    z-index: 10;
-  }
-  
-  .menu-open .nav-links {
-    @apply flex flex-col items-center;
-    display: flex;
-  }
 }
 
 /* Mobile menu button (hamburger) */
 .hamburger-btn {
-  @apply block md:hidden;
+  display: block;
   color: white;
   cursor: pointer;
+  z-index: 20;
+}
+
+@media (min-width: 768px) {
+  .hamburger-btn {
+    display: none;
+  }
+}
+
+/* Mobile menu otevřené */
+.menu-open .nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Styly pro domácí stránku */
 .home-container {
-  @apply flex flex-col min-h-screen;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .home-content {
-  @apply flex flex-col md:flex-row items-start justify-between;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .home-content {
+    flex-direction: row;
+  }
 }
 
 .home-text {
-  @apply text-left text-lg text-gray-700 mb-4 w-full md:w-1/2;
+  text-align: left;
+  font-size: 18px;
+  color: #4a5568;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .home-text {
+    width: 50%;
+  }
 }
 
 .home-image {
-  @apply rounded-lg w-full md:w-1/2;
+  border-radius: 8px;
+  width: 100%;
   background: linear-gradient(to right, rgba(245, 245, 245, 0.7) 5%, transparent 40%), url('/images/dogs.jpg') center/cover no-repeat;
   display: flex;
   align-items: flex-start;
-  height: 800px; /* Nastavení konkrétní výšky obrázku */
+  height: 400px;
+}
+
+@media (min-width: 768px) {
+  .home-image {
+    width: 50%;
+    height: 800px;
+  }
 }
 
 /* Styly pro nadpisy na domovské stránce */
 .home-header {
-  color: var(--highlight-color); /* Použití nové barvy pro nadpis */
+  color: var(--highlight-color);
 }
 
 /* Styly pro seznam s ikonami šeku */
@@ -140,62 +197,95 @@ a {
 }
 
 .home-text ul li::before {
-  content: '✓'; /* Znak pro šek */
+  content: '✓';
   position: absolute;
   left: 0;
-  color: var(--primary-color); /* Barva šeku */
+  color: var(--primary-color);
   font-weight: bold;
 }
 
 /* Styly pro komponentu Equipment */
 .equipment-container {
-  @apply container mx-auto p-8;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 32px;
 }
 
 .equipment-item {
-  @apply flex flex-col items-center text-center bg-white p-6 rounded-lg shadow-lg;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .equipment-item h2 {
-  @apply text-2xl font-semibold text-teal-600 mt-4;
+  font-size: 24px;
+  color: #38b2ac;
+  margin-top: 16px;
+  font-weight: 600;
 }
 
 .equipment-item p {
-  @apply text-lg text-gray-700 mt-4;
+  font-size: 18px;
+  color: #4a5568;
+  margin-top: 16px;
 }
 
 .equipment-item img {
-  @apply rounded-lg mb-4 shadow-lg;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Styly pro komponentu TeamMember */
 .team-member-container {
-  @apply bg-white shadow-lg rounded-lg p-6 text-center;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
 }
 
 .team-member-name {
-  @apply text-2xl font-semibold text-teal-600 mt-4;
+  font-size: 24px;
+  color: #38b2ac;
+  margin-top: 16px;
+  font-weight: 600;
 }
 
 .team-member-role {
-  @apply text-gray-700 mt-2 font-bold;
+  color: #4a5568;
+  margin-top: 8px;
+  font-weight: bold;
 }
 
 .team-member-description {
-  @apply text-gray-700 mt-4 text-left whitespace-pre-line;
+  color: #4a5568;
+  margin-top: 16px;
+  text-align: left;
+  white-space: pre-line;
 }
 
 /* Styly pro stránku kontaktu (Contact) */
 .contact-page {
-  padding: 1rem;
+  padding: 16px;
 }
 
 .contact-info {
-  @apply text-lg text-gray-700;
+  font-size: 18px;
+  color: #4a5568;
 }
 
 .contact-header {
-  @apply text-4xl font-bold text-center text-gray-900 mb-8;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  color: #333333;
+  margin-bottom: 32px;
 }
 
 .contact-image-container {
@@ -215,43 +305,60 @@ a {
 
 /* Styly pro Footer */
 .footer-container {
-  @apply text-white text-center p-4;
+  color: white;
+  text-align: center;
+  padding: 16px;
   background: url('/footer.png') no-repeat center center;
   background-size: cover;
 }
 
 .footer-link {
-  @apply mx-2 hover:underline;
+  margin: 0 8px;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .footer-separator {
-  @apply mx-2 text-white; /* Mezery a barva pro oddělovače */
+  margin: 0 8px;
+  color: white;
 }
 
 /* Styly pro kontejner s otevírací dobou (Opening Hours) */
 .opening-hours-container {
-  @apply text-white p-8 flex flex-col md:flex-row justify-center items-center text-center;
+  color: white;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   background: url('/footer.png') no-repeat center center;
   background-size: cover;
-  margin-bottom: 0; /* Odstranění mezery mezi blokem a footerem */
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .opening-hours-container {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 .opening-hours-section {
-  @apply flex-1 m-4;
-  max-width: 300px; /* Maximální šířka pro obsah, aby byl kompaktní */
+  flex: 1;
+  margin: 16px;
+  max-width: 300px;
 }
 
-/* Zvýraznění textu pod nadpisy a zvětšení fontu */
 .opening-hours-section p {
   color: black;
-  font-size: 1.25rem; /* Zvětšení fontu */
+  font-size: 20px;
 }
 
-/* Zvětšení rozestupu mezi sekcemi */
 .opening-hours-container .opening-hours-section:not(:last-child) {
-  margin-right: 10rem; /* Zvětšení rozestupu mezi bloky */
+  margin-right: 160px;
 }
 
+/* Utility třídy */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
