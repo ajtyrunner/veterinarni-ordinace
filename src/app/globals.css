@@ -2,28 +2,187 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Proměnné barevného schématu */
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 33, 37, 41;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 245, 245, 245;
+  --link-color: 0, 123, 255;
+  --header-start-color: 239, 149, 51; /* #ef9533 */
+  --header-end-color: 240, 161, 84;   /* #f0a154 */
+  --primary-color: #38b2ac; /* Teal-600 from Tailwind */
+  --secondary-color: #4a5568; /* Gray-700 from Tailwind */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
+/* Základní styly těla stránky */
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    to bottom,
+    transparent,
+    rgb(var(--background-end-rgb))
+  )
+  rgb(var(--background-start-rgb));
+}
+
+a {
+  color: rgb(var(--link-color));
+  &:hover {
+    color: rgb(var(--link-color));
+    opacity: 0.8;
+  }
+}
+
+/* Styly pro hlavičku (Header) */
+.header-gradient {
+  background: linear-gradient(to right, rgb(var(--header-start-color)), rgb(var(--header-end-color)));
+}
+
+.header-container {
+  @apply flex flex-col md:flex-row items-center justify-between p-4;
+}
+
+.logo-title {
+  @apply flex items-center space-x-4;
+}
+
+.logo-title img {
+  cursor: pointer; /* Ukazatel myši při hoveru nad logem */
+}
+
+.nav-links {
+  @apply flex flex-col md:flex-row md:space-x-4 space-y-2 md:space-y-0 mt-4 md:mt-0;
+}
+
+.nav-link {
+  @apply text-xl font-semibold text-white hover:text-gray-200 transition-colors duration-300; /* Zvýšení fontu odkazů */
+  border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover {
+  border-bottom-color: white; /* Při najetí zvýrazníme odkaz */
+}
+
+/* Styly pro domácí stránku */
+.home-container {
+  @apply flex flex-col min-h-screen;
+}
+
+.home-content {
+  @apply flex flex-col md:flex-row items-center justify-between;
+}
+
+.home-text {
+  @apply text-left text-lg text-gray-700 mb-4 w-full md:w-2/5;
+}
+
+.home-image {
+  @apply rounded-lg w-full md:w-3/5;
+}
+
+/* Styly pro komponentu Equipment */
+.equipment-container {
+  @apply container mx-auto p-8;
+}
+
+.equipment-item {
+  @apply flex flex-col items-center text-center bg-white p-6 rounded-lg shadow-lg;
+}
+
+.equipment-item h2 {
+  @apply text-2xl font-semibold text-teal-600 mt-4;
+}
+
+.equipment-item p {
+  @apply text-lg text-gray-700 mt-4;
+}
+
+.equipment-item img {
+  @apply rounded-lg mb-4 shadow-lg;
+}
+
+/* Styly pro komponentu TeamMember */
+.team-member-container {
+  @apply bg-white shadow-lg rounded-lg p-6 text-center;
+}
+
+.team-member-name {
+  @apply text-2xl font-semibold text-teal-600 mt-4;
+}
+
+.team-member-role {
+  @apply text-gray-700 mt-2 font-bold;
+}
+
+.team-member-description {
+  @apply text-gray-700 mt-4 text-left whitespace-pre-line;
+}
+
+/* Styly pro stránku kontaktu (Contact) */
+.contact-page {
+  padding: 1rem;
+}
+
+.contact-info {
+  @apply text-lg text-gray-700;
+}
+
+.contact-header {
+  @apply text-4xl font-bold text-center text-gray-900 mb-8;
+}
+
+.contact-image-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 75%; /* Poměr stran 4:3 */
+}
+
+.contact-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Styly pro Footer */
+.footer-container {
+  @apply text-white text-center p-4;
+  background: url('/footer.png') no-repeat center center;
+  background-size: cover;
+}
+
+.footer-link {
+  @apply mx-2 hover:underline;
+}
+
+.footer-separator {
+  @apply mx-2 text-white; /* Mezery a barva pro oddělovače */
+}
+
+/* Styly pro kontejner s otevírací dobou (Opening Hours) */
+.opening-hours-container {
+  @apply text-white p-8 flex flex-col md:flex-row justify-center items-center text-center;
+  background: url('/footer.png') no-repeat center center;
+  background-size: cover;
+  margin-bottom: 0; /* Odstranění mezery mezi blokem a footerem */
+}
+
+.opening-hours-section {
+  @apply flex-1 m-4;
+  max-width: 300px; /* Maximální šířka pro obsah, aby byl kompaktní */
+}
+
+/* Zvýraznění textu pod nadpisy a zvětšení fontu */
+.opening-hours-section p {
+  color: black;
+  font-size: 1.25rem; /* Zvětšení fontu */
+}
+
+/* Zvětšení rozestupu mezi sekcemi */
+.opening-hours-container .opening-hours-section:not(:last-child) {
+  margin-right: 20rem; /* Zvětšení rozestupu mezi bloky */
 }
 
 @layer utilities {
