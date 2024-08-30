@@ -50,19 +50,55 @@ a {
 
 .logo-title img {
   cursor: pointer; /* Ukazatel myši při hoveru nad logem */
+  @apply w-16 h-16 md:w-24 md:h-24; /* Responsivní velikost loga */
 }
 
+/* Styl pro navigační odkazy */
 .nav-links {
-  @apply flex flex-col md:flex-row md:space-x-4 space-y-2 md:space-y-0 mt-4 md:mt-0;
+  @apply hidden md:flex md:flex-row md:space-x-4 mt-4 md:mt-0;
+  text-align: center;
 }
 
 .nav-link {
-  @apply text-xl font-semibold text-white hover:text-gray-200 transition-colors duration-300;
+  @apply text-lg md:text-xl font-semibold text-white hover:text-gray-200 transition-colors duration-300;
   border-bottom: 2px solid transparent;
+  padding: 8px;
 }
 
 .nav-link:hover {
   border-bottom-color: white;
+}
+
+/* Mobile menu styl */
+.menu-open .nav-links {
+  @apply flex flex-col;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    @apply flex-col items-center; /* Vertikální menu na mobilních zařízeních */
+    display: none;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Volitelná barva pozadí pro mobilní menu */
+    position: absolute;
+    top: 100%; /* Umístění pod hlavičku */
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  .menu-open .nav-links {
+    @apply flex flex-col items-center;
+    display: flex;
+  }
+}
+
+/* Mobile menu button (hamburger) */
+.hamburger-btn {
+  @apply block md:hidden;
+  color: white;
+  cursor: pointer;
 }
 
 /* Styly pro domácí stránku */
@@ -213,7 +249,7 @@ a {
 
 /* Zvětšení rozestupu mezi sekcemi */
 .opening-hours-container .opening-hours-section:not(:last-child) {
-  margin-right: 20rem; /* Zvětšení rozestupu mezi bloky */
+  margin-right: 10rem; /* Zvětšení rozestupu mezi bloky */
 }
 
 @layer utilities {
