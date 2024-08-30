@@ -19,15 +19,21 @@
 /* Základní styly těla stránky */
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgb(var(--background-end-rgb))
+  )
+  rgb(var(--background-start-rgb));
 }
 
 a {
   color: rgb(var(--link-color));
-  &:hover {
-    color: rgb(var(--link-color));
-    opacity: 0.8;
-  }
+}
+
+a:hover {
+  color: rgb(var(--link-color));
+  opacity: 0.8;
 }
 
 /* Styly pro hlavičku (Header) */
@@ -70,21 +76,20 @@ a {
 
 /* Styl pro navigační odkazy */
 .nav-links {
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.8);
-  position: absolute;
-  top: 100%;
-  left: 0;
+  position: static;
+  top: auto;
+  left: auto;
   width: 100%;
   z-index: 10;
 }
 
 @media (min-width: 768px) {
   .nav-links {
-    display: flex;
     flex-direction: row;
     background-color: transparent;
     position: static;
@@ -106,27 +111,6 @@ a {
 .nav-link:hover {
   color: #ffffff;
   border-bottom-color: white;
-}
-
-/* Mobile menu button (hamburger) */
-.hamburger-btn {
-  display: block;
-  color: white;
-  cursor: pointer;
-  z-index: 20;
-}
-
-@media (min-width: 768px) {
-  .hamburger-btn {
-    display: none;
-  }
-}
-
-/* Mobile menu otevřené */
-.menu-open .nav-links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 /* Styly pro domácí stránku */

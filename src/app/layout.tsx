@@ -1,8 +1,8 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'Veterinární ordinace',
-  description: 'Nejlepší veterinární péče pro vaše mazlíčky.',
+  title: 'Veterina Svahy',
+  description: 'Veterinární ordinace Jížní svahy',
 };
 
 export default function RootLayout({
