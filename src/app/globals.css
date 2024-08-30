@@ -80,7 +80,7 @@ a {
 
 .home-image {
   @apply rounded-lg w-full md:w-1/2;
-  background: linear-gradient(to right, var(--background-color) 30%, rgba(245, 245, 245, 0)), url('/images/dogs.jpg') center/cover no-repeat;
+  background: linear-gradient(to left, rgba(245, 245, 245, 0.7) 30%, var(--background-color)), url('/images/dogs.jpg') center/cover no-repeat;
   display: flex;
   align-items: flex-start;
   height: 100%;
