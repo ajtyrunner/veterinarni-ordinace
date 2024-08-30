@@ -66,8 +66,8 @@ export default function Services() {
             />
           </div>
         </div>
+        <OpeningHours />
       </div>
-      <OpeningHours />      
       <Footer />
     </>
   );

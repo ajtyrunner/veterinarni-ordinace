@@ -8,8 +8,13 @@ const EquipmentPage = () => {
   return (
     <>
       <Header />
-      <Equipment />
-      <OpeningHours />      
+      <div className="flex flex-col min-h-screen">
+        <div className="container mx-auto p-8 flex-grow">
+          <h1 className="text-4xl font-bold text-center text-gray-900 mb-8">Naše vybavení</h1>
+          <Equipment />
+        </div>
+        <OpeningHours />
+      </div>
       <Footer />
     </>
   );

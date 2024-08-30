@@ -18,25 +18,22 @@ const Equipment = () => {
   ];
 
   return (
-    <div className="equipment-container">
-      <h1 className="text-4xl font-bold mb-8 text-center text-teal-600">Vybavení</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {equipmentItems.map((item, index) => (
-          <div key={index} className="equipment-item">
-            <div className="flex justify-center"> {/* Flexbox pro centrování */}
-              <Image
-                src={item.image}
-                alt={item.alt}
-                width={400}
-                height={300}
-                className="rounded-lg mb-4 shadow-lg"
-              />
-            </div>
-            <h2 className="text-2xl font-semibold text-teal-600 mt-4">{item.title}</h2>
-            <p className="text-lg text-gray-700 mt-4">{item.description}</p>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {equipmentItems.map((item, index) => (
+        <div key={index} className="equipment-item bg-white p-6 rounded-lg shadow-lg">
+          <div className="flex justify-center"> {/* Flexbox pro centrování */}
+            <Image
+              src={item.image}
+              alt={item.alt}
+              width={400}
+              height={300}
+              className="rounded-lg mb-4 shadow-lg"
+            />
           </div>
-        ))}
-      </div>
+          <h2 className="text-2xl font-semibold text-teal-600 mt-4">{item.title}</h2>
+          <p className="text-lg text-gray-700 mt-4">{item.description}</p>
+        </div>
+      ))}
     </div>
   );
 };

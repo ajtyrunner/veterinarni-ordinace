@@ -44,8 +44,8 @@ export default function Team() {
             />
           </div>
         </div>
+        <OpeningHours />
       </div>
-      <OpeningHours />
       <Footer />
     </>
   );
