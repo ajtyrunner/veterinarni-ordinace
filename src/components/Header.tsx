@@ -16,17 +16,11 @@ const Header = () => {
     return (
         <header className="header-gradient">
             {/* Kontaktni informace nad logem */}
-            <div className="w-full bg-gradient-to-r from-[rgba(var(--header-start-color),1)] to-[rgba(var(--header-end-color),1)] p-2 text-center text-white flex justify-center space-x-4">
-                <div className="flex items-center space-x-2">
-                    <FontAwesomeIcon icon={faPhone} />
-                    <a href="tel:571118622" className="text-white">
-                        Tel: 571 118 622
-                    </a>
-                </div>
+            <div className="w-full bg-gradient-to-r from-[rgba(var(--header-start-color),1)] to-[rgba(var(--header-end-color),1)] p-2 text-center text-white flex justify-center items-center space-x-4 flex-wrap">
                 <div className="flex items-center space-x-2">
                     <FontAwesomeIcon icon={faMobileAlt} />
                     <a href="tel:721049699" className="text-white">
-                        Mobil: 721 049 699
+                        Mobil: +420 721 049 699
                     </a>
                 </div>
                 <div className="flex items-center space-x-2">
