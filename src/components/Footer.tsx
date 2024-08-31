@@ -3,8 +3,8 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer className="footer-container">
-      <p>&copy; 2024 Veterina Svahy. Všechna práva vyhrazena.</p>
-      <nav>
+      <p className="footer-text">&copy; 2024 Veterina Svahy. Všechna práva vyhrazena.</p>
+      <nav className="footer-nav">
         <a href="/" className="footer-link">Domů</a>
         <span className="footer-separator">|</span>
         <a href="/services" className="footer-link">Služby</a>

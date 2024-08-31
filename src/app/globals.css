@@ -29,11 +29,11 @@ body {
 }
 
 a {
-  color: rgb(var(--link-color));
+  color: white; /* Nastavení bílé barvy pro odkazy */
+  text-decoration: underline;
 }
 
 a:hover {
-  color: rgb(var(--link-color));
   opacity: 0.8;
 }
 
@@ -300,12 +300,37 @@ a:hover {
 .footer-link {
   margin: 0 8px;
   text-decoration: underline;
-  cursor: pointer;
+  color: white; /* Nastavení bílé barvy pro odkazy ve Footeru */
 }
 
 .footer-separator {
   margin: 0 8px;
   color: white;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 8px; /* Zmenšení paddingu na mobilních zařízeních */
+  }
+
+  .footer-text {
+    font-size: 12px; /* Zmenšení textu ve Footeru na mobilních zařízeních */
+  }
+
+  .footer-link {
+    font-size: 12px; /* Zmenšení velikosti odkazů na mobilních zařízeních */
+  }
+
+  .footer-separator {
+    display: none; /* Skrytí oddělovačů na menších obrazovkách */
+  }
 }
 
 /* Styly pro kontejner s otevírací dobou (Opening Hours) */
