@@ -14,6 +14,7 @@
   --secondary-color: #4a5568; /* Gray-700 from Tailwind */
   --highlight-color: #f7941f; /* Nová barva pro nadpis */
   --background-color: rgb(245, 245, 245); /* Barva pozadí */
+  font-size: 14px; /* Zmenšení výchozí velikosti písma */
 }
 
 /* Základní styly těla stránky */
@@ -46,7 +47,7 @@ a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 16px;
+  padding: 12px; /* Zmenšení paddingu */
 }
 
 @media (min-width: 768px) {
@@ -58,19 +59,19 @@ a:hover {
 .logo-title {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px; /* Zmenšení mezery */
 }
 
 .logo-title img {
   cursor: pointer;
-  width: 64px;
-  height: 64px;
+  width: 48px; /* Zmenšení loga */
+  height: 48px;
 }
 
 @media (min-width: 768px) {
   .logo-title img {
-    width: 96px;
-    height: 96px;
+    width: 72px;
+    height: 72px;
   }
 }
 
@@ -101,9 +102,9 @@ a:hover {
 }
 
 .nav-link {
-  font-size: 18px;
+  font-size: 16px; /* Zmenšení velikosti písma odkazu */
   color: white;
-  padding: 8px 16px;
+  padding: 6px 12px; /* Zmenšení paddingu */
   transition: color 0.3s, border-bottom-color 0.3s;
   border-bottom: 2px solid transparent;
 }
@@ -135,9 +136,9 @@ a:hover {
 
 .home-text {
   text-align: left;
-  font-size: 18px;
+  font-size: 16px; /* Zmenšení velikosti písma */
   color: #4a5568;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   width: 100%;
 }
 
@@ -153,13 +154,13 @@ a:hover {
   background: linear-gradient(to right, rgba(245, 245, 245, 0.7) 5%, transparent 40%), url('/images/dogs.jpg') center/cover no-repeat;
   display: flex;
   align-items: flex-start;
-  height: 400px;
+  height: 300px; /* Zmenšení výšky obrázku */
 }
 
 @media (min-width: 768px) {
   .home-image {
     width: 50%;
-    height: 800px;
+    height: 600px; /* Zmenšení výšky obrázku */
   }
 }
 
@@ -176,8 +177,8 @@ a:hover {
 
 .home-text ul li {
   position: relative;
-  padding-left: 2rem;
-  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .home-text ul li::before {
@@ -192,7 +193,7 @@ a:hover {
 .equipment-container {
   max-width: 100%;
   margin: 0 auto;
-  padding: 32px;
+  padding: 24px; /* Zmenšení paddingu */
 }
 
 .equipment-item {
@@ -201,27 +202,27 @@ a:hover {
   align-items: center;
   text-align: center;
   background-color: white;
-  padding: 24px;
+  padding: 18px; /* Zmenšení paddingu */
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .equipment-item h2 {
-  font-size: 24px;
+  font-size: 20px; /* Zmenšení velikosti nadpisu */
   color: #38b2ac;
-  margin-top: 16px;
+  margin-top: 12px;
   font-weight: 600;
 }
 
 .equipment-item p {
-  font-size: 18px;
+  font-size: 16px; /* Zmenšení velikosti textu */
   color: #4a5568;
-  margin-top: 16px;
+  margin-top: 12px;
 }
 
 .equipment-item img {
   border-radius: 8px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -230,14 +231,14 @@ a:hover {
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
-  padding: 24px;
+  padding: 18px; /* Zmenšení paddingu */
   text-align: center;
 }
 
 .team-member-name {
-  font-size: 24px;
+  font-size: 20px; /* Zmenšení velikosti nadpisu */
   color: #38b2ac;
-  margin-top: 16px;
+  margin-top: 12px;
   font-weight: 600;
 }
 
@@ -249,27 +250,27 @@ a:hover {
 
 .team-member-description {
   color: #4a5568;
-  margin-top: 16px;
+  margin-top: 12px;
   text-align: left;
   white-space: pre-line;
 }
 
 /* Styly pro stránku kontaktu (Contact) */
 .contact-page {
-  padding: 16px;
+  padding: 12px; /* Zmenšení paddingu */
 }
 
 .contact-info {
-  font-size: 18px;
+  font-size: 16px; /* Zmenšení velikosti textu */
   color: #4a5568;
 }
 
 .contact-header {
-  font-size: 36px;
+  font-size: 30px; /* Zmenšení velikosti nadpisu */
   font-weight: bold;
   text-align: center;
   color: #333333;
-  margin-bottom: 32px;
+  margin-bottom: 24px; /* Zmenšení mezery */
 }
 
 .contact-image-container {
@@ -291,7 +292,7 @@ a:hover {
 .footer-container {
   color: white;
   text-align: center;
-  padding: 16px;
+  padding: 12px; /* Zmenšení paddingu */
   background: url('/footer.png') no-repeat center center;
   background-size: cover;
 }
@@ -310,7 +311,7 @@ a:hover {
 /* Styly pro kontejner s otevírací dobou (Opening Hours) */
 .opening-hours-container {
   color: white;
-  padding: 32px;
+  padding: 24px; /* Zmenšení paddingu */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -329,17 +330,17 @@ a:hover {
 
 .opening-hours-section {
   flex: 1;
-  margin: 16px;
+  margin: 12px;
   max-width: 300px;
 }
 
 .opening-hours-section p {
   color: black;
-  font-size: 20px;
+  font-size: 18px; /* Zmenšení velikosti textu */
 }
 
 .opening-hours-container .opening-hours-section:not(:last-child) {
-  margin-right: 160px;
+  margin-right: 120px; /* Zmenšení mezery */
 }
 
 /* Utility třídy */
