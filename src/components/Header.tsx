@@ -20,7 +20,7 @@ const Header = () => {
                 <div className="flex items-center space-x-2">
                     <FontAwesomeIcon icon={faMobileAlt} />
                     <a href="tel:721049699" className="text-white">
-                        Mobil: +420 721 049 699
+                        Mobil: 721 049 699
                     </a>
                 </div>
                 <div className="flex items-center space-x-2">
