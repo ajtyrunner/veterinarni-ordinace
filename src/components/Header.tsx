@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhone, faMobileAlt, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
     const [active, setActive] = useState(false);
@@ -12,7 +14,28 @@ const Header = () => {
     };
 
     return (
-        <header className="header-gradient bg-gray-800">
+        <header className="header-gradient">
+            {/* Kontaktni informace nad logem */}
+            <div className="w-full bg-gradient-to-r from-[rgba(var(--header-start-color),1)] to-[rgba(var(--header-end-color),1)] p-2 text-center text-white flex justify-center space-x-4">
+                <div className="flex items-center space-x-2">
+                    <FontAwesomeIcon icon={faPhone} />
+                    <a href="tel:571118622" className="text-white">
+                        Tel: 571 118 622
+                    </a>
+                </div>
+                <div className="flex items-center space-x-2">
+                    <FontAwesomeIcon icon={faMobileAlt} />
+                    <a href="tel:721049699" className="text-white">
+                        Mobil: 721 049 699
+                    </a>
+                </div>
+                <div className="flex items-center space-x-2">
+                    <FontAwesomeIcon icon={faEnvelope} />
+                    <a href="mailto:veterina-svahy@email.cz" className="text-white">
+                        veterina-svahy@email.cz
+                    </a>
+                </div>
+            </div>
             <div className="container mx-auto px-6 h-24 flex justify-between items-center flex-wrap md:flex-nowrap">
                 {/* Logo */}
                 <div className="flex items-center flex-1">
