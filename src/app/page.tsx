@@ -49,7 +49,7 @@ export default function Home() {
         <div className="container mx-auto p-8 flex-grow">
           <div className="home-content flex flex-col md:flex-row">
             <div className="home-text">
-              <h1 className="text-5xl font-bold mb-4 home-header">O vašeho miláčka se postaráme</h1>
+              <h1 className="text-4xl font-bold mb-4 home-header">O vašeho miláčka se postaráme</h1>
               <p className="mb-4">Komplexní péče o malá domácí zvířata</p>
               <ul className="mt-4 mb-8">
                 <li>Očkování</li>
