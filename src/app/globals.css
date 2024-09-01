@@ -126,6 +126,7 @@ a:hover {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+  position: relative;
 }
 
 @media (min-width: 768px) {
@@ -140,6 +141,7 @@ a:hover {
   color: #4a5568;
   margin-bottom: 12px;
   width: 100%;
+  z-index: 2; /* Text bude nad obrázkem pozadí */
 }
 
 @media (min-width: 768px) {
@@ -148,19 +150,50 @@ a:hover {
   }
 }
 
+/* Styly pro pozadí obrázku dogs.jpg */
 .home-image {
   border-radius: 8px;
   width: 100%;
-  background: linear-gradient(to right, rgba(245, 245, 245, 0.7) 5%, transparent 40%), url('/images/dogs.jpg') center/cover no-repeat;
+  background: linear-gradient(
+    to right,
+    rgba(245, 245, 245, 0.7) 40%,
+    transparent 100%
+  ), url('/images/dogs.jpg') center/cover no-repeat;
   display: flex;
   align-items: flex-start;
   height: 300px;
+  position: relative;
+  z-index: 1; /* Umožňuje zobrazení nad textem */
 }
 
 @media (min-width: 768px) {
   .home-image {
     width: 50%;
     height: 600px;
+  }
+}
+
+/* Na mobilních zařízeních bude background s dogs.jpg zakrytý textem */
+@media (max-width: 767px) {
+  .home-content {
+    background: linear-gradient(
+      to right,
+      rgba(245, 245, 245, 0.7) 100%,
+      transparent 100%
+    ), url('/images/dogs.jpg') center/cover no-repeat;
+    padding: 20px;
+  }
+
+  .home-image {
+    display: none; /* Skrýt prvek pro pozadí */
+  }
+
+  .home-text {
+    z-index: 2; /* Text bude nad obrázkem pozadí */
+  }
+
+  .snapshot-container {
+    z-index: 2; /* Snapshot bude nad obrázkem pozadí */
   }
 }
 
@@ -187,6 +220,20 @@ a:hover {
   left: 0;
   color: var(--primary-color);
   font-weight: bold;
+}
+
+/* Styly pro snapshot kamery */
+.snapshot-container {
+  width: 70%;
+  max-width: 600px; /* Maximální šířka snapshotu */
+}
+
+.snapshot-image {
+  width: 100%; /* Nastaví šířku na 100% pro responsivitu */
+  border: 2px solid #ccc; /* Ohraničení */
+  border-radius: 8px; /* Zakulacení rohů */
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Stín */
 }
 
 /* Styly pro komponentu Equipment */

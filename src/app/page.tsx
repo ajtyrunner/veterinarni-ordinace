@@ -3,8 +3,11 @@ import Head from 'next/head';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import OpeningHours from '@/components/OpeningHours';
+import Image from 'next/image';
 
 export default function Home() {
+  const imageUrl = 'https://drive.google.com/uc?id=14bnS2wf_VQ1AoSmaPRo4avErNeCVxO-m'; // Nahraďte skutečným ID souboru z Google Drive
+
   return (
     <>
       <Head>
@@ -44,19 +47,33 @@ export default function Home() {
       <Header />
       <div className="home-container">
         <div className="container mx-auto p-8 flex-grow">
-          <div className="home-content">
+          <div className="home-content flex flex-col md:flex-row">
             <div className="home-text">
               <h1 className="text-5xl font-bold mb-4 home-header">O vašeho miláčka se postaráme</h1>
-              <p>Komplexní péče o malá domácí zvířata</p>
-              <ul className="mt-4">
+              <p className="mb-4">Komplexní péče o malá domácí zvířata</p>
+              <ul className="mt-4 mb-8">
                 <li>Očkování</li>
                 <li>Odborné zákroky</li>
                 <li>Profesionální prevence</li>
                 <li>Diagnostika a účinná léčba</li>
+                <li>Pohled do čekárny</li>                
               </ul>
+              {/* Nový objekt na zobrazení obrázku */}
+              <div className="snapshot-container mb-8">
+                <div className="snapshot-image border-2 border-gray-300 rounded-lg overflow-hidden shadow-lg">
+                  <Image
+                    src={imageUrl}
+                    alt="Snapshot from Camera"
+                    layout="responsive"
+                    width={600}
+                    height={400}
+                    className="rounded-lg"
+                  />
+                </div>
+              </div>              
             </div>
             <div className="home-image">
-              {/* Nahradíme Image komponentu divem s pozadím */}
+              {/* Tady zůstává pozadí s dogs.jpg */}
             </div>
           </div>
         </div>
