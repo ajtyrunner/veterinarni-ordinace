@@ -82,7 +82,7 @@ const Header = () => {
             <div
                 className={
                     active
-                        ? "flex flex-col space-y-4 bg-gray-800 w-full p-5 md:hidden"
+                        ? "flex flex-col space-y-4 bg-gradient-to-r from-[rgba(var(--header-start-color),1)] to-[rgba(var(--header-end-color),1)] w-full p-5 md:hidden"
                         : "hidden"
                 }
             >

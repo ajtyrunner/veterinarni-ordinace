@@ -374,3 +374,8 @@ a:hover {
     text-wrap: balance;
   }
 }
+
+/* Styly pro výsuvné menu na mobilních zařízeních */
+.mobile-nav {
+  background: linear-gradient(to right, rgb(var(--header-start-color)), rgb(var(--header-end-color)));
+}
