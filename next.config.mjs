@@ -1,9 +1,14 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+// next.config.js nebo next.config.mjs
+export default {
     images: {
-      domains: ['lh3.googleusercontent.com', 'drive.google.com'],
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: 'drive.google.com', // nebo jiná doména, ze které stahujete obrázky
+          port: '', // volitelně, pokud používáte specifický port
+          pathname: '/uc', // volitelně, pokud je potřeba specifikovat cestu
+        },
+      ],
     },
   };
-  
-  export default nextConfig;
   
