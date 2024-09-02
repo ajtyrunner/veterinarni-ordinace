@@ -6,7 +6,8 @@ import OpeningHours from '@/components/OpeningHours';
 import Image from 'next/image';
 
 export default function Home() {
-  const imageUrl = 'https://drive.google.com/uc?id=14bnS2wf_VQ1AoSmaPRo4avErNeCVxO-m'; // Nahraďte skutečným ID souboru z Google Drive
+  const imageId = '14bnS2wf_VQ1AoSmaPRo4avErNeCVxO-m'; // Nahraďte skutečným ID souboru z Google Drive
+  const imageUrl = `https://drive.google.com/uc?id=${imageId}&rand=${Date.now()}`; // Přidání náhodného parametru pro zabránění cacheování
 
   return (
     <>
