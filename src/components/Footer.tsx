@@ -1,9 +1,15 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDog } from '@fortawesome/free-solid-svg-icons'; // Používáme ikonku psa
 
 const Footer = () => {
   return (
     <footer className="footer-container">
-      <p className="footer-text">&copy; 2024 Veterina Svahy. Všechna práva vyhrazena.</p>
+      <p className="footer-text">
+        &copy; 2024 Veterina Svahy. Všechna práva vyhrazena. <a href="mailto:milankopp@seznam.cz">Vytvořil 
+          <FontAwesomeIcon icon={faDog} className="ml-2" /> {/* Ikonka psa */}
+        </a>
+      </p>
       <nav className="footer-nav">
         <a href="/" className="footer-link">Domů</a>
         <span className="footer-separator">|</span>

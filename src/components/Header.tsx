@@ -4,7 +4,8 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhone, faMobileAlt, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faMobileAlt, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons"; // Přidání Facebook ikony
 
 const Header = () => {
     const [active, setActive] = useState(false);
@@ -27,6 +28,13 @@ const Header = () => {
                     <FontAwesomeIcon icon={faEnvelope} />
                     <a href="mailto:veterina-svahy@email.cz" className="text-white">
                         veterina-svahy@email.cz
+                    </a>
+                </div>
+                {/* Přidání odkazu na Facebook */}
+                <div className="flex items-center space-x-2">
+                    
+                    <a href="https://www.facebook.com/people/Veterina-Svahy/100049515202415/" className="text-white" target="_blank" rel="noopener noreferrer">
+                    <FontAwesomeIcon icon={faFacebook} />
                     </a>
                 </div>
             </div>
@@ -110,4 +118,3 @@ const Header = () => {
 };
 
 export default Header;
-
