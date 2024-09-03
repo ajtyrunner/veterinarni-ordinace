@@ -22,6 +22,9 @@ export default function Home() {
         <meta property="og:image" content="https://www.veterina-svahy.cz/images/dogs.jpg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.ico" />
+        <meta httpEquiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0" />
+        <meta httpEquiv="Pragma" content="no-cache" />
+        <meta httpEquiv="Expires" content="0" />        
         <script type="application/ld+json">
           {`
           {
