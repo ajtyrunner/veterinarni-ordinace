@@ -1,6 +1,7 @@
-"use client";  // Tímto označíte komponentu jako klientskou
+"use client"; // Tímto označíte komponentu jako klientskou
 
 import { useState, useEffect } from 'react';
+import Script from 'next/script';
 
 declare global {
   interface Window {
@@ -26,18 +27,28 @@ export default function CookieConsent() {
     loadGoogleAnalytics();
   };
 
+  // Opravená verze funkce gtag
   const loadGoogleAnalytics = () => {
-    window.dataLayer = window.dataLayer || [];
-    function gtag(...args: any[]) {
-      window.dataLayer.push(args);
+    if (typeof window !== "undefined") {
+      window.dataLayer = window.dataLayer || [];
+      const gtag = (...args: any[]) => {
+        window.dataLayer.push(args);
+      };
+      gtag('js', new Date());
+      gtag('config', 'G-EHQ8T6HDD3', {
+        page_path: window.location.pathname,
+      });
     }
-    gtag('js', new Date());
-    gtag('config', 'G-EHQ8T6HDD3', {
-      page_path: window.location.pathname,
-    });
   };
 
-  if (consentGiven) return null;
+  if (consentGiven) {
+    return (
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=G-EHQ8T6HDD3`}
+        strategy="afterInteractive"
+      />
+    );
+  }
 
   return (
     <div className="fixed bottom-0 left-0 right-0 bg-gray-800 text-white p-4 z-50">
