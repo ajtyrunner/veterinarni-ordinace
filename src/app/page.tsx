@@ -1,4 +1,6 @@
-import React from 'react';
+"use client"; // Tento řádek zajišťuje, že komponenta běží na klientské straně
+
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -7,7 +9,17 @@ import Image from 'next/image';
 
 export default function Home() {
   const imageId = '14bnS2wf_VQ1AoSmaPRo4avErNeCVxO-m'; // Nahraďte skutečným ID souboru z Google Drive
-  const imageUrl = `https://drive.google.com/uc?id=${imageId}&rand=${Date.now()}`; // Přidání náhodného parametru pro zabránění cacheování
+  const [imageUrl, setImageUrl] = useState(`https://drive.google.com/uc?id=${imageId}&rand=${Date.now()}`);
+
+  // Funkce pro aktualizaci obrázku každých 30 sekund
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setImageUrl(`https://drive.google.com/uc?id=${imageId}&rand=${Date.now()}`);
+    }, 30000); // 30 sekund
+
+    // Vyčistíme interval při odchodu z komponenty
+    return () => clearInterval(intervalId);
+  }, []);
 
   return (
     <>
