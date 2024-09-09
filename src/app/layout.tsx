@@ -1,4 +1,5 @@
 import './globals.css';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import CookieConsent from '@/components/CookieConsent'; // Keep CookieConsent component
 
 export const metadata = {
@@ -19,6 +20,7 @@ export default function RootLayout({
       <body className="flex flex-col min-h-screen">
         {children}
         <CookieConsent />
+        <SpeedInsights />
       </body>
     </html>
   );
