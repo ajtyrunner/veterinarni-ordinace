@@ -15,7 +15,7 @@ export default function Home() {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setImageUrl(`https://drive.google.com/uc?id=${imageId}&rand=${Date.now()}`);
-    }, 30000); // 30 sekund
+    }, 300000); // 30 sekund
 
     // Vyčistíme interval při odchodu z komponenty
     return () => clearInterval(intervalId);
