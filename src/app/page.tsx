@@ -78,6 +78,7 @@ export default function Home() {
               <div className="snapshot-container mb-8">
                 <div className="snapshot-image border-2 border-gray-300 rounded-lg overflow-hidden shadow-lg">
                   <Image
+                    unoptimized
                     src={imageUrl}
                     alt="Snapshot from Camera"
                     layout="responsive"
