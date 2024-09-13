@@ -9,7 +9,7 @@ import Image from 'next/image';
 
 export default function Home() {
   const imageId = '14bnS2wf_VQ1AoSmaPRo4avErNeCVxO-m'; // Nahraďte skutečným ID souboru z Google Drive
-  const [imageUrl, setImageUrl] = useState(`https://drive.google.com/uc?id=${imageId}&rand=${Date.now()}`);
+  const [imageUrl, setImageUrl] = useState(`https://lh3.googleusercontent.com/d/${imageId}&rand=${Date.now()}`);
 
   // Funkce pro aktualizaci obrázku každých 30 sekund
   useEffect(() => {
