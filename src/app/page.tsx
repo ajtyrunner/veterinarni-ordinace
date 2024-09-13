@@ -14,7 +14,7 @@ export default function Home() {
   // Funkce pro aktualizaci obrázku každých 30 sekund
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setImageUrl(`https://drive.google.com/uc?id=${imageId}&rand=${Date.now()}`);
+      setImageUrl(`https://lh3.googleusercontent.com/d/${imageId}&rand=${Date.now()}`);
     }, 300000); // 30 sekund
 
     // Vyčistíme interval při odchodu z komponenty
