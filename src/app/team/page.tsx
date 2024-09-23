@@ -40,7 +40,7 @@ export default function Team() {
               role="veterinární lékařka"
               description={`V roce 2017 vystudovala fakultu veterinárního lékařství na Veterinární a farmaceutické univerzitě v Brně. Od té doby se věnuje zejména interní medicíně malých zvířat, v posledních letech také medicíně drobných savců. V těchto oborech také absolvovala a dále se účastní dalších vzdělávacích kurzů a seminářů.
 koníčky - čas strávený s rodinou a mými domácími mazlíčky, turistika, četba a kultura.`}
-              imageUrl="/images/MVDr_Klara_Navratilova.jpg" // Přidána URL fotky
+              imageUrl="https://lh3.googleusercontent.com/d/1veDIFmtQ2v3AzKaVZcoEM-gsgrjFCU42" // Přidána URL fotky
             />
             <TeamMember
               name="MVDr. Martina Šimková"
@@ -50,7 +50,8 @@ koníčky - čas strávený s rodinou a mými domácími mazlíčky, turistika, 
               Absolvovala kurz Dornovy metody.
               Doma má několik pejsků, krajtu královskou a další plazy. 
               Jejím koníčkem je canicross, výcvik psů, běhání a jízda na kole.`}
-              imageUrl="/images/MVDr_Martina_Simkova.jpg" // Přidána URL fotky
+            //  imageUrl="/images/MVDr_Martina_Simkova.jpg" // Přidána URL fotky
+              imageUrl="https://lh3.googleusercontent.com/d/1tYdvuEPBQUW6w7fbfvI5lbzYUuq_Smk4"
             />
             <TeamMember
               name="Renata Šillerová"

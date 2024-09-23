@@ -56,7 +56,9 @@ export default function Career() {
                   ],
                 },
               ]}
-              imageUrl="/images/career-cat-hamster.jpg"
+            //   https://drive.google.com/drive/folders/1MvQVk9kwEjmLnJNRrvZopnG9GIrylVIK?usp=sharing
+            //  imageUrl="/images/career-cat-hamster.jpg"
+            imageUrl="https://lh3.googleusercontent.com/d/1NPJIMmkznQt7eW76P_AxB7TFJUSAe7Yg"
             />
           </div>
         </div>
