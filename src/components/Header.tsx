@@ -83,6 +83,9 @@ const Header = () => {
                     <Link href="/calendar" className="nav-link text-white/80 hover:text-white/90 transition-all duration-300">
                         Kalendář
                     </Link>
+                    <Link href="/career" className="nav-link text-white/80 hover:text-white/90 transition-all duration-300">
+                        Kariéra
+                    </Link>
                 </nav>
             </div>
 
@@ -112,6 +115,9 @@ const Header = () => {
                 <Link href="/calendar" className="nav-link text-white/80 hover:text-white/90 transition-all duration-300">
                     Kalendář
                 </Link>
+                <Link href="/career" className="nav-link text-white/80 hover:text-white/90 transition-all duration-300">
+                    Kariéra
+                </Link>                
             </div>
         </header>
     );
