@@ -12,6 +12,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({ name, role, description, imageU
   return (
     <div className="bg-white shadow-lg rounded-lg p-6 text-center">
       <Image
+        unoptimized
         src={imageUrl}
         alt={name}
         width={150}

@@ -14,6 +14,7 @@ const JobListing: React.FC<JobListingProps> = ({ title, sections, imageUrl }) =>
   return (
     <div className="bg-white shadow-lg rounded-lg p-6 text-center max-w-3xl mx-auto"> {/* max-w-3xl omezuje šířku */}
       <Image
+        unoptimized
         src={imageUrl}
         alt={title}
         width={150}
