@@ -36,6 +36,16 @@ export default function Team() {
               imageUrl="/images/MVDr_Jana_Starostikova.jpg" // Přidána URL fotky
             />
             <TeamMember 
+              name="MVDr. Martina Šimková" 
+              role="veterinární lékařka"
+              description={`Absolventka VFU – Fakulty veterinárního lékařství v Brně. 
+              Specializuje se na interní medicínu malých zvířat a exotických zvířat - plazů. 
+              Absolvovala kurz Dornovy metody.
+              Doma má několik pejsků, krajtu královskou a další plazy. 
+              Jejím koníčkem je canicross, výcvik psů, běhání a jízda na kole.`} 
+              imageUrl="/images/MVDr_Martina_Simkova.jpg" // Přidána URL fotky
+            /> 
+            <TeamMember 
               name="Renata Šillerová" 
               role="veterinární sestra"
               description={`Členka ČAVS /Česká asociace veterinárních sester/.
