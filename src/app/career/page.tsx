@@ -34,6 +34,12 @@ export default function Career() {
                     'Stylové pracovní oblečení s obrázky zvířátek – protože i pracovní uniforma může být roztomilá! 🐶🐱🐰',
                   ],
                 },
+                {
+                  heading: 'Kontakt',
+                  content: [
+                    '📩 Zaujalo tě to? Napiš nám na veterina-svahy@email.cz, příp.737518187 nebo se rovnou stav na kus řeči!',
+                  ],
+                },
               ]}
               imageUrl="https://lh3.googleusercontent.com/d/1KnEEXksRiisWfGc7GNMStOIUkXb0QqOC"
             />
