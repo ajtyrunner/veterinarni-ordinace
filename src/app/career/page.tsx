@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import JobListing from '@/components/JobListing'; 
+import JobListing from '@/components/JobListing';
 import OpeningHours from '@/components/OpeningHours';
 
 export default function Career() {
@@ -13,52 +13,76 @@ export default function Career() {
           <h1 className="text-4xl font-bold text-center text-gray-900 mb-8">Kariéra</h1>
           <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-8">
             <JobListing
-              title="Hledá se veterinář/ka /může být i junior/: Krotitel koček a uklidňovač křečků"
+              title="‼️ HLEDÁME POSILU DO NAŠEHO TÝMU ‼️"
               sections={[
                 {
-                  heading: "Kdo jsme",
+                  heading: 'Koho hledáme?',
                   content: [
-                    "Jsme Veterina Svahy, místo, kde jsou pacienti chlupatí, opeření i šupinatí a občas nás překvapí něčím, co nás ani ve škole neučili.",
-                    "Naše ordinace je plná smíchu, lásky ke zvířatům a občas i létajících peříček.",
+                    'Veterinární sestru/bratra s láskou ke psům, kočkám i drobným savcům.',
+                    'Někoho, kdo zvládne asistovat u zákroků, poradit páníčkům a udržet klid i ve chvílích, kdy to v čekárně vrní, štěká a piští zároveň.',
+                    'Milovníka organizace – protože i v chaosu musí být systém.',
                   ],
                 },
                 {
-                  heading: "Co budete dělat",
+                  heading: 'Co nabízíme?',
                   content: [
-                    "Přesvědčovat tvrdohlavé králíky, že mrkev po zákroku chutná lépe.",
-                    "Uklidňovat nervózní páníčky, kteří jsou nervóznější než jejich mazlíčci.",
-                    "Spolupracovat s týmem, který ocení váš smysl pro humor a odolnost vůči psímu smutnému pohledu.",
-                  ],
-                },
-                {
-                  heading: "Co od vás očekáváme",
-                  content: [
-                    "Vzdělání v oboru veterinární medicíny.",
-                    "Odolnost vůči chlupům ve všech částech vašeho oblečení.",
-                    "Lásku k zvířatům všech velikostí a druhů.",
-                    "Ochotu pracovat i v sobotu dopoledne, ale nebojte, jenom jednou za 14 dní.",
-                  ],
-                },
-                {
-                  heading: "Co nabízíme",
-                  content: [
-                    "Práci v kolektivu, kde je každý den novým dobrodružstvím.",
-                    "Možnost povýšení na seniorního krotitele.",
-                    "Neomezený přístup k pamlskům.",
-                    "Stylový pracovní oděv s motivem tlapek.",
-                    "Žádné pohotovosti ani noční směny.",
-                  ],
-                },
-                {
-                  heading: "Jak se přihlásit",
-                  content: [
-                    "Pošlete nám svůj životopis na veterina-svahy@email.cz. Těšíme se na Vás (a naši pacienti také)!",
+                    'Nástup od 1.6.2025.',
+                    'Práci na plný úvazek.',
+                    'Práci v týmu, který se směje i po náročné směně.',
+                    'Možnost učit se a růst (a občas si pochovat ježka nebo fretku).',
+                    'Férové ohodnocení a pohodu mezi zvířaty.',
+                    'Stylové pracovní oblečení s obrázky zvířátek – protože i pracovní uniforma může být roztomilá! 🐶🐱🐰',
                   ],
                 },
               ]}
-            //   https://drive.google.com/drive/folders/1MvQVk9kwEjmLnJNRrvZopnG9GIrylVIK?usp=sharing
-            //  imageUrl="/images/career-cat-hamster.jpg"
-            imageUrl="https://lh3.googleusercontent.com/d/1NPJIMmkznQt7eW76P_AxB7TFJUSAe7Yg"
+              imageUrl="https://lh3.googleusercontent.com/d/1KnEEXksRiisWfGc7GNMStOIUkXb0QqOC"
+            />
+
+            <JobListing
+              title="Hledá se veterinář/ka /může být i junior/: Krotitel koček a uklidňovač křečků"
+              sections={[
+                {
+                  heading: 'Kdo jsme',
+                  content: [
+                    'Jsme Veterina Svahy, místo, kde jsou pacienti chlupatí, opeření i šupinatí a občas nás překvapí něcím, co nás ani ve škole neučili.',
+                    'Naše ordinace je plná smíchu, lásky ke zvířatům a občas i létajících peříček.',
+                  ],
+                },
+                {
+                  heading: 'Co budete dělat',
+                  content: [
+                    'Přesvědčovat tvrdohlavé králíky, že mrkev po zákroku chutná lépe.',
+                    'Uklidňovat nervózní páníčky, kteří jsou nervóznější než jejich mazlíčci.',
+                    'Spolupracovat s týmem, který ocení váš smysl pro humor a odolnost vůči psímu smutnému pohledu.',
+                  ],
+                },
+                {
+                  heading: 'Co od vás očekáváme',
+                  content: [
+                    'Vzdělání v oboru veterinární medicíny.',
+                    'Odolnost vůči chlupům ve všech částech vašeho oblečení.',
+                    'Lásku k zvířatům všech velikostí a druhů.',
+                    'Ochotu pracovat i v sobotu dopoledne, ale nebojte, jenom jednou za 14 dní.',
+                  ],
+                },
+                {
+                  heading: 'Co nabízíme',
+                  content: [
+                    'Práci v kolektivu, kde je každý den novým dobrodružstvím.',
+                    'Možnost povýšení na seniorního krotitele.',
+                    'Neomezený přístup k pamlskům.',
+                    'Stylový pracovní oděv s motivem tlapek.',
+                    'Žádné pohotovosti ani noční směny.',
+                  ],
+                },
+                {
+                  heading: 'Jak se přihlásit',
+                  content: [
+                    'Pošlete nám svůj životopis na veterina-svahy@email.cz. Těšíme se na Vás (a naši pacienti také)!',
+                  ],
+                },
+              ]}
+              imageUrl="https://lh3.googleusercontent.com/d/1NPJIMmkznQt7eW76P_AxB7TFJUSAe7Yg"
             />
           </div>
         </div>
