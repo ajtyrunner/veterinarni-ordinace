@@ -60,9 +60,9 @@ export default function Home() {
           }
           `}
         </script>
-      </Head>
-      <AlertBadge />      
+      </Head>  
       <Header />
+      <AlertBadge />          
       <div className="home-container">
         <div className="container mx-auto p-8 flex-grow">
           <div className="home-content flex flex-col md:flex-row">

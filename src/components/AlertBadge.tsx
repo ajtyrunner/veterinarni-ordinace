@@ -11,11 +11,11 @@ const AlertBadge: React.FC = () => {
     <AnimatePresence>
       {visible && (
         <motion.div
-          initial={{ y: -50, opacity: 0 }}
+          initial={{ y: -30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          exit={{ y: -50, opacity: 0 }}
-          transition={{ duration: 0.4 }}
-          className="fixed top-0 left-0 right-0 bg-[#fff4e6] text-[#cc6600] border-b border-[#ef9533] px-6 py-3 text-center font-semibold shadow-md z-50"
+          exit={{ y: -30, opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          className="bg-[#fff4e6] text-[#cc6600] border-y border-[#ef9533] px-4 py-2 md:px-6 md:py-3 text-center text-sm md:text-base font-medium shadow-md relative z-30"
         >
           🐾 Hledáme <strong>veterinární sestru</strong>!{' '}
           <Link
