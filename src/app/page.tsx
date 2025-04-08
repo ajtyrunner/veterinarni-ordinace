@@ -5,6 +5,7 @@ import Head from 'next/head';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import OpeningHours from '@/components/OpeningHours';
+import AlertBadge from '@/components/AlertBadge';
 import Image from 'next/image';
 
 export default function Home() {
@@ -60,6 +61,7 @@ export default function Home() {
           `}
         </script>
       </Head>
+      <AlertBadge />
       <Header />
       <div className="home-container">
         <div className="container mx-auto p-8 flex-grow">
