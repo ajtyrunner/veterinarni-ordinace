@@ -434,9 +434,14 @@ a:hover {
   border-radius: 12px;
   padding: 18px;
   text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: none; /* Zruší fixní šířku */
+  height: 100%; /* Zajistí stejnou výšku v grid layoutu */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
 
 .job-listing-title {
   font-size: 24px;

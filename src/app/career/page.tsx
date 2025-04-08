@@ -11,7 +11,7 @@ export default function Career() {
       <div className="flex flex-col min-h-screen">
         <div className="container mx-auto p-8 flex-grow">
           <h1 className="text-4xl font-bold text-center text-gray-900 mb-8">Kariéra</h1>
-          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 items-stretch">
             <JobListing
               title="‼️ HLEDÁME POSILU DO NAŠEHO TÝMU ‼️"
               sections={[
