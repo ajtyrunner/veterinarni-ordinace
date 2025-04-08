@@ -95,10 +95,10 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <AlertBadge />           
         <OpeningHours />
       </div>
-      <Footer />
-      <AlertBadge />      
+      <Footer />   
     </>
   );
 }
