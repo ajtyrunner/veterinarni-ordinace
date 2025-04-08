@@ -20,10 +20,11 @@ const AlertBadge: React.FC = () => {
           🐾 Hledáme <strong>veterinární sestru</strong>!{' '}
           <Link
             href="/career"
-            className="underline font-semibold text-teal-800 hover:text-teal-600 transition-colors"
+            className="underline text-teal-700 hover:text-teal-600 transition-colors font-semibold"
           >
             Více zde
-          </Link>
+          </Link>{' '}
+          🐾
           <button
             onClick={() => setVisible(false)}
             className="absolute right-4 top-1/2 -translate-y-1/2 text-[#cc6600] font-bold hover:text-[#ef9533]"
