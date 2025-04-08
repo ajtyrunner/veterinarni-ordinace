@@ -94,11 +94,11 @@ export default function Home() {
               {/* Tady zůstává pozadí s dogs.jpg */}
             </div>
           </div>
-        </div>
-        <AlertBadge />           
+        </div>        
         <OpeningHours />
       </div>
-      <Footer />   
+      <Footer />  
+      <AlertBadge />          
     </>
   );
 }
