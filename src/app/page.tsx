@@ -61,6 +61,7 @@ export default function Home() {
           `}
         </script>
       </Head>
+      <AlertBadge />      
       <Header />
       <div className="home-container">
         <div className="container mx-auto p-8 flex-grow">
@@ -97,8 +98,7 @@ export default function Home() {
         </div>        
         <OpeningHours />
       </div>
-      <Footer />  
-      <AlertBadge />          
+      <Footer />        
     </>
   );
 }
