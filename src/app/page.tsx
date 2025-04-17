@@ -6,6 +6,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import OpeningHours from '@/components/OpeningHours';
 import AlertBadge from '@/components/AlertBadge';
+import NewsSection from '@/components/NewsSection';
 import Image from 'next/image';
 
 export default function Home() {
@@ -96,6 +97,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <NewsSection />        
         <OpeningHours />
       </div>
       <Footer />
