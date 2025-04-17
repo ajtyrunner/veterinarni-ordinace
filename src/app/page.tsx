@@ -10,18 +10,20 @@ import NewsSection from '@/components/NewsSection';
 import Image from 'next/image';
 
 export default function Home() {
-  const imageId = '14bnS2wf_VQ1AoSmaPRo4avErNeCVxO-m'; // Nahraďte skutečným ID souboru z Google Drive
+  const imageId = '14bnS2wf_VQ1AoSmaPRo4avErNeCVxO-m';
   const [imageUrl, setImageUrl] = useState(`https://lh3.googleusercontent.com/d/${imageId}`);
 
-  // Funkce pro aktualizaci obrázku každých 30 sekund
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      setImageUrl(`https://lh3.googleusercontent.com/d/${imageId}`);
-    }, 300000); // 30 sekund
+    const updateImage = () => {
+      const timestamp = new Date().getTime(); // nový timestamp pokaždé
+      setImageUrl(`https://lh3.googleusercontent.com/d/${imageId}?t=${timestamp}`);
+    };
 
-    // Vyčistíme interval při odchodu z komponenty
+    updateImage(); // hned po načtení
+    const intervalId = setInterval(updateImage, 300000); // každých 5 min
+
     return () => clearInterval(intervalId);
-  }, []);
+  }, []);  
 
   return (
     <>
